@@ -1305,15 +1305,8 @@ html {
     box-sizing: inherit;
 }
 
-/*body {
-    background-image: url("images/overlay.png"), url("images/bg.jpg");
-    background-repeat: repeat, no-repeat;
-    background-size: auto, 100% 100%;
-    background-attachment: fixed;
-    overflow-y: scroll;
-}*/
 body { 
-    background: url("images/bg.jpg") no-repeat center center fixed; 
+    background: url("images/bg.webp") no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
