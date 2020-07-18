@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <title>Rafinha Voigt | Fotografias</title>
+    <meta name=viewport content="width=device-width, initial-scale=1, user-scalable=no">
+    <link href=https://rafinhavoigt.github.io/ rel=canonical>
+    <meta name=google-site-verification content=0WwKyjdYoo9BN9cgYGMGjofsWihyro1ajCmnVxXFGpI>
+    <meta name=author content="Cézar Augusto">
+    <meta name=keywords content="rafinhavf, Rafael Voigt Ferreira, fotógrafo Indaial, rafinha voigt">
+    <meta name=description content="Fotógrafo de Indaial, Brasil. Fotos de paisagens e alguns retratos tirados na região sul do país">
+    <meta name=twitter:site content=@rafinhavf>
+    <meta name=twitter:card content=summary>
+    <meta name=twitter:title content="Rafinha Voigt | Fotografias">
+    <meta name=twitter:description content="Fotógrafo de Indaial, Brasil. Fotos de paisagens e alguns retratos tirados na região sul do país">
+    <meta name=twitter:image content=https://rafinhavoigt.github.io/android-chrome-512x512.png>
+    <link href="css/metro-all.min.css" rel="stylesheet">
+    <style>
+body { 
+  background: url("css/bg.webp") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.animation{
+  display: none; 
+}
+    </style>
+  </head>
+  <body>
+    <div class="container text-center pos-absolute pos-center">
+      <nav>
+        <div class="row flex-align-center flex-justify-center">
+          <div class="cell-2 cell-sm-1">
+            <a href="#home"><span class="mif-home mif-4x fg-white"</span></a>
+          </div>
+          <div class="cell-2 cell-sm-1">
+            <a href="#work"><span class="mif-folder mif-4x fg-gray"</span></a>
+          </div>
+          <div class="cell-2 cell-sm-1">
+            <a href="https://www.instagram.com/rafinhavoigt/" target="_blank"><span class="mif-instagram mif-4x fg-gray"</span></a>
+          </div>
+          <div class="cell-2 cell-sm-1">
+            <a href="https://wa.me/5547991461055" target="_blank"><span class="mif-whatsapp mif-4x fg-gray"</span></a>
+          </div>
+        </div>
+      </nav>
+      <main></main>
+    </div>
+    <script src="js/metro.min.js"></script>
+    <script>
+      function changePage(){
+        var page = window.location.hash.substring(1);
+        Metro.utils.exec(page);
+      }
+      function loadPage(url){
+        function makeAnimations(){
+          $('.animation').fadeIn();
+          window.scrollTo(0,0);
+        }
+        $.get(url).then(function(response){
+          var ano = new Date().getFullYear();
+          $('main').html(response);
+          $('main').append(`<footer class="text-muted">Rafael Voigt Ferreira © ${ano}</footer>`);
+          makeAnimations();
+        });
+      }
+      function work(){
+        $('.text-center').removeClass('pos-absolute pos-center');
+        loadPage('partials/work.html');
+        $('.mif-folder').removeClass('fg-gray');
+        $('.mif-folder').addClass('fg-white');
+        $('.mif-home').removeClass('fg-white');
+        $('.mif-home').addClass('fg-gray');
+      }
+      function home(){
+        $('.text-center').addClass('pos-absolute pos-center');
+        loadPage('partials/home.html');
+        $('.mif-folder').removeClass('fg-white');
+        $('.mif-folder').addClass('fg-gray');
+        $('.mif-home').removeClass('fg-gray');
+        $('.mif-home').addClass('fg-white')
+      }
+      $(function(){
+        $(window).on('hashchange', function(){
+          changePage();
+        });
+        if (window.location.hash){
+          changePage();
+        } else {
+          window.location.hash='home';
+        }
+      });
+    </script>
+  </body>
+</html>
