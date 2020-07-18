@@ -10,7 +10,7 @@ function loadPage(url){
     $.get(url).then(function(response){
         var ano = new Date().getFullYear();
         $('main').html(response);
-        $('main').append(`<footer class="text-muted p-10">Rafael Voigt Ferreira © ${ano}</footer>`);
+        $('main').append(`<footer class="text-muted p-5">Rafael Voigt Ferreira © ${ano}</footer>`);
         makeAnimations();
     });
 }
