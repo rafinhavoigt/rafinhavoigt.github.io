@@ -23,8 +23,8 @@ h1,h2,h3,h4,h5,h6,p{font-family:'Quicksand',sans-serif;}
     100% { opacity: 1; }
 }
 .fadeIn {
-    -webkit-animation: fadeIn 1.5s ease-in-out;
-    -moz-animation: fadeIn 1.5s ease-in-out;
-    -o-animation: fadeIn 1.5s ease-in-out;
-    animation: fadeIn 1.5s ease-in-out;
+    -webkit-animation: fadeIn 1s ease-in-out;
+    -moz-animation: fadeIn 1s ease-in-out;
+    -o-animation: fadeIn 1s ease-in-out;
+    animation: fadeIn 1s ease-in-out;
 }
