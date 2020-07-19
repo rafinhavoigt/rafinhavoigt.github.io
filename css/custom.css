@@ -5,7 +5,26 @@ body {
     -o-background-size: cover;
     background-size: cover;
 }
-.animation{
-    display: none; 
-}
 h1,h2,h3,h4,h5,h6,p{font-family:'Quicksand',sans-serif;}
+@-webkit-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; } 
+}
+@-moz-keyframes fadeIn {
+    0% { opacity: 0;}
+    100% { opacity: 1; }
+}
+@-o-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+.fadeIn {
+    -webkit-animation: fadeIn 1.5s ease-in-out;
+    -moz-animation: fadeIn 1.5s ease-in-out;
+    -o-animation: fadeIn 1.5s ease-in-out;
+    animation: fadeIn 1.5s ease-in-out;
+}
