@@ -31,7 +31,7 @@
       </nav>
       <div class="bg-white text-left container-fluid fadeIn">
         <div class="pt-6">  
-          <h2><a href="https://instagram.com/rafinhavoigt" class="fg-black" id="instagram_username"></a></h2>
+          <h2><a class="fg-black" id="instagram_username"></a></h2>
           <p id="instagram_bio"></p>
         </div>
         <div id="pictures" class="row pb-2"></div>
@@ -40,7 +40,7 @@
     <footer class="text-muted p-5 text-center">Rafael Voigt Ferreira © <script>document.write(new Date().getFullYear());</script></footer>
     <script src="https://cdn.metroui.org.ua/v4/js/metro.min.js"></script>
     <script>
-    var url = 'https://www.instagram.com/rafinhavoigt/?__a=1';
+    var url = 'https://www.instagram.com/cezargaiteiro/?__a=1';
     $.json(url).then(
         function(response){
             var username = response['graphql']['user']['username'];
@@ -56,7 +56,7 @@
             $('#instagram_username').innerText("@"+username);
             $('#instagram_bio').innerText(instagram_bio);
             $("#pictures").html(pictures_in_row);
-            console.log(pictures_in_row);
+            document.getElementById('instagram_username').setAttribute('href', 'https://instagram.com/'+username);
         }
     );
     </script>
