@@ -38,27 +38,27 @@
       </div>
     </div>
     <footer class="text-muted p-5 text-center">Rafael Voigt Ferreira © <script>document.write(new Date().getFullYear());</script></footer>
-    <script src="https://cdn.metroui.org.ua/v4/js/metro.min.js"></script>
-    <script>
-    var url = 'https://www.instagram.com/rafinhavoigt/?__a=1';
-    $.json(url).then(
-        function(response){
+      <script src="https://cdn.metroui.org.ua/v4/js/metro.min.js"></script>
+      <script>
+        var url = 'https://www.instagram.com/rafinhavoigt/?__a=1';
+        $.json(url).then(
+          function(response){
             var username = response['graphql']['user']['username'];
             var instagram_bio = response['graphql']['user']['biography'];
             var array_of_pictures = response['graphql']['user']['edge_owner_to_timeline_media']['edges'];
             var pictures_in_row = "";
             for (var i = 0; i < array_of_pictures.length; i++) {
-                var picture_url = array_of_pictures[i]['node']['thumbnail_resources'][3]['src'];
-                var picture_label = array_of_pictures[i]['node']['edge_media_to_caption']['edges'][0]['node']['text'];
-                var accessibility_caption = array_of_pictures[i]['node']['accessibility_caption'];
-                pictures_in_row += `<div class="cell-md-4"><div class="img-container"><img src="${picture_url}" alt="${accessibility_caption}" loading="lazy"><div class="image-overlay op-orange"><div class="pos-relative pos-center"><h3>${picture_label}</h3></div></div></div></div>`;
+              var picture_url = array_of_pictures[i]['node']['thumbnail_resources'][3]['src'];
+              var picture_label = array_of_pictures[i]['node']['edge_media_to_caption']['edges'][0]['node']['text'];
+              var accessibility_caption = array_of_pictures[i]['node']['accessibility_caption'];
+              pictures_in_row += `<div class="cell-md-4"><div class="img-container"><img src="${picture_url}" alt="${accessibility_caption}" loading="lazy"><div class="image-overlay op-orange"><div class="pos-relative pos-center"><h3>${picture_label}</h3></div></div></div></div>`;
             }
             $('#instagram_username').innerText("@"+username);
             $('#instagram_bio').innerText(instagram_bio);
             $("#pictures").html(pictures_in_row);
             document.getElementById('instagram_username').setAttribute('href', 'https://instagram.com/'+username);
-        }
-    );
-    </script>
+          }
+        );
+      </script>
   </body>
 </html>
