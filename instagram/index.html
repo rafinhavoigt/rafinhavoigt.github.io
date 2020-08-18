@@ -51,7 +51,7 @@
                 var picture_url = array_of_pictures[i]['node']['thumbnail_resources'][3]['src'];
                 var picture_label = array_of_pictures[i]['node']['edge_media_to_caption']['edges'][0]['node']['text'];
                 var accessibility_caption = array_of_pictures[i]['node']['accessibility_caption'];
-                pictures_in_row += `<div class="cell-md-4"><div class="img-container"><img src="${picture_url}" alt="${accessibility_caption}"><div class="image-overlay op-orange"><div class="pos-relative pos-center"><h3>${picture_label}</h3></div></div></div></div>`;
+                pictures_in_row += `<div class="cell-md-4"><div class="img-container"><img src="${picture_url}" alt="${accessibility_caption}" loading="lazy"><div class="image-overlay op-orange"><div class="pos-relative pos-center"><h3>${picture_label}</h3></div></div></div></div>`;
             }
             $('#instagram_username').innerText("@"+username);
             $('#instagram_bio').innerText(instagram_bio);
