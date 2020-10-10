@@ -20,38 +20,49 @@
     <meta name="twitter:image" content="https://rafinhavoigt.github.io/android-chrome-512x512.png">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.metroui.org.ua/v4/css/metro-all.min.css">
-    <link href="/css/custom.min.css" rel="stylesheet">
+    <link href="/css/custom.css" rel="stylesheet">
   </head>
-  <body>
-    <div class="container text-center fadeIn pos-absolute pos-center">
-      <nav>
-        <div class="row flex-align-center flex-justify-center">
-          <div class="cell-2 cell-sm-1"><a href="/"><span class="mif-home mif-4x fg-white"></span></a></div>
-          <div class="cell-2 cell-sm-1"><a href="/trabalho/"><span class="mif-folder mif-4x fg-gray"></span></a></div>
-          <div class="cell-2 cell-sm-1"><a href="/instagram/"><span class="mif-instagram mif-4x fg-gray"></span></a></div>
-          <div class="cell-2 cell-sm-1"><a href="/twitter/" target=_blank><span class="mif-twitter mif-4x fg-gray"></span></a></div>
-          <div class="cell-2 cell-sm-1"><a href="https://wa.me/5547991461055" target="_blank"><span class="mif-whatsapp mif-4x fg-gray"></span></a></div>
-        </div>
-      </nav>
-      <div class="row bg-white flex-align-center no-gap">
-        <div class="cell-md-8 fg-black text-light">
-          <h2 class="pt-10">Rafael Voigt Ferreira</h2>
-          <h3><small>Fotógrafo e músico</small></h3>
-        </div>
-        <div class="cell-md">
-          <a href="/trabalho/">
-            <div class="img-container">
-              <img src="images/me.webp" alt="Rapaz sentado no parachoque de um fusca com um violão no colo">
-              <div class="bg-lightOrange"><span class="ani-pass mif-arrow-right mif-5x fg-white"></span></div>
-              <div class="image-overlay op-orange">
-                <h3 class="pos-relative pos-center">Ver fotos</h3>
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
-      <footer class="text-muted p-5">Rafael Voigt Ferreira © <script>document.write(new Date().getFullYear());</script></footer>
+  <body class="bg-secondary fg-secondary text-center">
+    <div class="container-fluid pos-fixed fixed-top z-top fg-primary bg-primary" id="header">
+      <header class="app-bar container bg-transparent pos-relative" data-role="appbar" data-expand-point="md">
+        <a href="/" class="brand no-hover">
+          <span class="text-leader">Rafinha Voigt</span>
+        </a>
+        <ul class="app-bar-menu ml-auto text-upper">
+          <li><a href="/" class="app-bar-item">Início</a></li>
+          <li>
+            <a href="#" class="dropdown-toggle">Portifólio</a>
+            <ul class="d-menu" data-role="dropdown">
+              <li><a href="#">Fotografia comercial</a></li>
+              <li><a href="#">Pessoas</a></li>
+              <li><a href="#">Paisagens</a></li>
+              <li><a href="#">Natureza</a></li>
+            </ul>
+          </li>
+          <li><a href="#" class="app-bar-item">Contato</a></li>
+          <li><a href="#" class="app-bar-item">Sobre</a></li>
+        </ul>
+      </header>
     </div>
-    <script src="https://cdn.metroui.org.ua/v4/js/metro.min.js"></script>
+    <article class="screen-height pos-relative">
+      <div class="img-container">
+        <img src="/img/bg-picture1.jpg">
+      </div>
+        <h1 class="text-bold pos-absolute pos-center display4 fg-white">Fotografia comercial</h1>
+    </article>
+    <article class="screen-height pos-relative">
+      <div class="img-container">
+        <img src="/img/bg-picture2.jpg">
+      </div>
+        <span class="text-bold pos-absolute pos-center display4 fg-white">Retrato</span>
+    </article>
+    <article class="pos-relative">
+      <div class="img-container">
+        <img src="/img/bg-picture3.jpg">
+      </div>
+        <span class="text-bold pos-absolute pos-center display4 fg-white">Natureza</span>
+    </article>
+    <footer class="text-muted p-5 text-center bg-dark">Rafael Voigt Ferreira © <script>document.write(new Date().getFullYear());</script></footer>
+      <script src="https://cdn.metroui.org.ua/v4/js/metro.min.js"></script>
   </body>
 </html>
