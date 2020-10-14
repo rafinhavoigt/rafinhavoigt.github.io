@@ -13,10 +13,10 @@
 .fg-scheme {
   color: white !important;
 }
-.bg-scheme-secondary, .bg-default {
+.bg-scheme-secondary {
   background-color: #647687 !important;
 }
-.fg-scheme-secondary, .fg-default {
+.fg-scheme-secondary {
   color: white !important;
 }
 .bg-control {
@@ -25,15 +25,19 @@
 .fg-control {
   color: black !important;
 }
+.fg-scheme-tertiary {
+  color: #F0A30A !important;
+}
 .bd-default {
   border-color: #F0A30A !important;
 }
 .disabled {
   cursor: default;
 }
+/*
 a:not([class]) {
     color: #647687;
-}
+}*/
 hr {
   background-color: #F0A30A;
 }
