@@ -13,11 +13,11 @@
 .fg-scheme {
   color: white !important;
 }
-.bg-scheme-secondary {
+.bg-scheme-secondary, .bg-default {
   background-color: #647687 !important;
 }
-.fg-scheme-secondary {
-  color: black !important;
+.fg-scheme-secondary, .fg-default {
+  color: white !important;
 }
 .bg-control {
   background-color: #F0A30A !important;
@@ -1029,4 +1029,12 @@ textarea.focused,
 .table thead th,
 .table thead td {
   color: black;
+}
+input[type="button"]:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus,
+input[type="button"]:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background-color: #F0A30A;
 }
