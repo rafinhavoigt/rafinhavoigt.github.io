@@ -34,10 +34,6 @@
 .disabled {
   cursor: default;
 }
-/*
-a:not([class]) {
-    color: #647687;
-}*/
 hr {
   background-color: #F0A30A;
 }
