@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="/css/custom.css">
   </head>
   <body class="bg-scheme-secondary fg-scheme-secondary text-center mt-13">
-    <div class="container-fluid z-top fg-scheme bg-scheme pos-fixed fixed-top">
+    <div class="container-fluid z-top bg-scheme fg-scheme pos-fixed fixed-top">
       <header class="app-bar container bg-transparent pos-relative" data-role="appbar" data-expand-point="md">
         <a href="/" class="brand no-hover">
           <span class="text-leader">Rafinha Voigt</span>
@@ -28,9 +28,8 @@
             <a href="#" class="dropdown-toggle">Portifólio</a>
             <ul class="d-menu" data-role="dropdown">
               <li><a href="/comercial">Fotografia comercial</a></li>
-              <li><a href="/pessoas">Pessoas</a></li>
+              <li><a href="/retratos">Retratos</a></li>
               <li><a href="/paisagens">Paisagens</a></li>
-              <li><a href="/natureza">Natureza</a></li>
             </ul>
           </li>
           <li><a href="/contato" class="app-bar-item">Contato</a></li>
@@ -86,45 +85,6 @@
         </div>
       </footer>
       <script src="/js/metro.js"></script>
-      <script>
-        function formatTelephone(e){
-                  var tel = e.value;
-                  if (tel.length === 0){
-                            e.value = '(' + tel;
-                            return true;
-                          } else if (tel.length === 3){
-                                    e.value = tel + ') ';
-                                    return true;
-                                  } else if (tel.length === 9){
-                                            if (e.value["5"] != "9"){
-                                                      e.value = tel + "-";
-                                                      e.maxLength = 14;
-                                                    }
-                                            return true;
-                                          } else if (tel.length === 10){
-                                                    if (e.value["5"] == "9"){
-                                                              e.value = tel + "-";
-                                                              e.maxLength = 15;
-                                                            }
-                                                    return true;
-                                                  }
-                }
-                function submitForm(){
-                          var form = document.getElementsByTagName('form')[0];
-                          console.log(form);
-                          var headers = { Accept: 'application/json' };
-                          $.ajax({url: 'https://formspree.io/mdozalpk',
-                                    method: form.method,
-                                    data: form,
-                                    headers: headers
-                                  }).then(
-                                            function(response){
-                                                      Metro.infobox.create("<h2>Sucesso!</h2><p>A sua mensagem foi enviada com sucesso, eu retornarei o mais breve possível.</p>", "yellow");
-                                                      console.log(response);
-                                                      form.reset();
-                                                    }
-                                          );
-                        }
-      </script>
+      <script>function formatTelephone(e){var o=e.value;return 0===o.length?(e.value="("+o,!0):3===o.length?(e.value=o+") ",!0):9===o.length?("9"!=e.value[5]&&(e.value=o+"-",e.maxLength=14),!0):10===o.length?("9"==e.value[5]&&(e.value=o+"-",e.maxLength=15),!0):void 0}function submitForm(){var e=document.getElementsByTagName("form")[0];console.log(e);$.ajax({url:"https://formspree.io/mdozalpk",method:e.method,data:e,headers:{Accept:"application/json"}}).then(function(o){Metro.infobox.create("<h2>Sucesso!</h2><p>A sua mensagem foi enviada com sucesso, eu retornarei o mais breve possível.</p>","yellow"),console.log(o),e.reset()})}</script>
   </body>
 </html>
