@@ -7,37 +7,33 @@
   width: 100vw;
 }
 .darken{
-  filter: brightness(50%);
+  filter: brightness(75%);
+}
+[class*="image"]{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position:relative; 
+}
+h1, .h1 {
+    margin-top: 0;
+    line-height: 1;
+    color: white;
+    font-family: 'Sansita Swashed', cursive;
 }
 /* For small and portrait screens */
 @media screen and (max-width:768px) {
   h1, .h1 {
     font-size: 5rem;
-    margin-top: 0;
-    line-height: 1;
-    color: white;
-    font-family: 'Sansita Swashed', cursive;
   }
   .image1{
     background-image: url('/img/retratos/1.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    position:relative;
   }
   .image2{
     background-image: url('/img/retratos/2.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    position:relative;
   }
   .image3{
     background-image: url('/img/retratos/3.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    position:relative;
   }
 }
 
@@ -45,31 +41,15 @@
 @media screen and (min-width: 768px) {
   h1, .h1 {
     font-size: 7rem;
-    margin-top: 0;
-    line-height: 1;
-    color: white;
-    font-family: 'Sansita Swashed', cursive;
   }
   .image1{
     background-image: url('/img/bg-picture1.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    position:relative;
   }
   .image2{
     background-image: url('/img/bg-picture2.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    position:relative;
   }
   .image3{
     background-image: url('/img/bg-picture3.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    position:relative;
   }
 
 }
