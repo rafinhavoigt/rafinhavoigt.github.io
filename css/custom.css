@@ -27,13 +27,13 @@ h1, .h1 {
     font-size: 5rem;
   }
   .image1{
-    background-image: url('/img/bg-portrait1.jpg');
+    background-image: url('/img/bg-portrait1.webp');
   }
   .image2{
-    background-image: url('/img/bg-portrait2.jpg');
+    background-image: url('/img/bg-portrait2.webp');
   }
   .image3{
-    background-image: url('/img/bg-portrait3.jpg');
+    background-image: url('/img/bg-portrait3.webp');
   }
 }
 
@@ -43,13 +43,13 @@ h1, .h1 {
     font-size: 7rem;
   }
   .image1{
-    background-image: url('/img/bg-picture1.jpg');
+    background-image: url('/img/bg-picture1.webp');
   }
   .image2{
-    background-image: url('/img/bg-picture2.jpg');
+    background-image: url('/img/bg-picture2.webp');
   }
   .image3{
-    background-image: url('/img/bg-picture3.jpg');
+    background-image: url('/img/bg-picture3.webp');
   }
 
 }
