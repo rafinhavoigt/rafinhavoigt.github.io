@@ -13,7 +13,7 @@
     <meta name="author" content="Cézar Augusto de Campos">
     <meta name="keywords" content="rafinhavf, Rafael Voigt Ferreira, fotógrafo Indaial, rafinha voigt">
     <meta name="description" content="Fotógrafo de Indaial, Brasil. Fotos de paisagens e alguns retratos tirados na região sul do país">
-    <link rel="stylesheet" href="/css/metro-all.css">
+    <link rel="stylesheet" href="/css/metro-all.min.css">
     <link rel="stylesheet" href="/css/custom.css">
   </head>
   <body class="bg-scheme-secondary fg-scheme-secondary text-center mt-13">
@@ -84,7 +84,7 @@
           </div>
         </div>
       </footer>
-      <script src="/js/metro.js"></script>
+      <script src="/js/metro.min.js"></script>
       <script>function formatTelephone(e){var o=e.value;return 0===o.length?(e.value="("+o,!0):3===o.length?(e.value=o+") ",!0):9===o.length?("9"!=e.value[5]&&(e.value=o+"-",e.maxLength=14),!0):10===o.length?("9"==e.value[5]&&(e.value=o+"-",e.maxLength=15),!0):void 0}function submitForm(){var e=document.getElementsByTagName("form")[0];console.log(e);$.ajax({url:"https://formspree.io/mdozalpk",method:e.method,data:e,headers:{Accept:"application/json"}}).then(function(o){Metro.infobox.create("<h2>Sucesso!</h2><p>A sua mensagem foi enviada com sucesso, eu retornarei o mais breve possível.</p>","yellow"),console.log(o),e.reset()})}</script>
   </body>
 </html>
