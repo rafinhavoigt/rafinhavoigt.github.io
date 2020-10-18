@@ -27,13 +27,13 @@ h1, .h1 {
     font-size: 5rem;
   }
   .image1{
-    background-image: url('/img/retratos/1.jpg');
+    background-image: url('/img/bg-portrait1.jpg');
   }
   .image2{
-    background-image: url('/img/retratos/2.jpg');
+    background-image: url('/img/bg-portrait2.jpg');
   }
   .image3{
-    background-image: url('/img/retratos/3.jpg');
+    background-image: url('/img/bg-portrait3.jpg');
   }
 }
 
