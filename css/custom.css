@@ -408,8 +408,8 @@ textarea.focused,
 }
 .app-bar .app-bar-menu li .d-menu,
 .app-bar .app-bar-container .d-menu {
-  background-color: #F0A30A !important;
-  color: black !important;
+  background-color: black !important;
+  color: #F0A30A !important;
 }
 .app-bar .app-bar-menu li .d-menu li:hover,
 .app-bar .app-bar-container .d-menu li:hover {

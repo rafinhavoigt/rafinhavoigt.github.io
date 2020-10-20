@@ -23987,7 +23987,7 @@ aside::after {
 .v-menu li:hover > a,
 .d-menu li:hover .icon,
 .v-menu li:hover .icon {
-  color: inherit;
+  color: white;
 }
 .d-menu li a[data-hotkey],
 .v-menu li a[data-hotkey] {

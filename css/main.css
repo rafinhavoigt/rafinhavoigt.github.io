@@ -23987,7 +23987,7 @@ aside::after {
 .v-menu li:hover > a,
 .d-menu li:hover .icon,
 .v-menu li:hover .icon {
-  color: inherit;
+  color: white;
 }
 .d-menu li a[data-hotkey],
 .v-menu li a[data-hotkey] {
@@ -42640,8 +42640,8 @@ textarea.focused,
 }
 .app-bar .app-bar-menu li .d-menu,
 .app-bar .app-bar-container .d-menu {
-  background-color: #F0A30A !important;
-  color: black !important;
+  background-color: black !important;
+  color: #F0A30A !important;
 }
 .app-bar .app-bar-menu li .d-menu li:hover,
 .app-bar .app-bar-container .d-menu li:hover {
