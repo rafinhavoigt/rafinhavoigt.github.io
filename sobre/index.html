@@ -14,28 +14,10 @@
     <meta name="description" content="Fotógrafo de Indaial, Brasil. Fotos de paisagens e alguns retratos tirados na região sul do país">
     <link href="/css/main.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@700&display=swap" rel="stylesheet">
+    <script src="/js/metro.min.js"></script>
   </head>
   <body class="bg-scheme-secondary fg-scheme-secondary text-center mt-13">
-    <div class="container-fluid z-top bg-scheme fg-scheme pos-fixed fixed-top">
-      <header class="app-bar container bg-transparent pos-relative" data-role="appbar" data-expand-point="md">
-        <a href="/" class="brand no-hover">
-          <span class="text-leader">Rafinha Voigt</span>
-        </a>
-        <ul class="app-bar-menu ml-auto text-upper">
-          <li><a href="/" class="app-bar-item">Início</a></li>
-          <li>
-            <a href="#" class="dropdown-toggle">Portifólio</a>
-            <ul class="d-menu" data-role="dropdown">
-              <li><a href="/comercial">Fotografia comercial</a></li>
-              <li><a href="/retratos">Retratos</a></li>
-              <li><a href="/paisagens">Paisagens</a></li>
-            </ul>
-          </li>
-          <li><a href="/contato" class="app-bar-item">Contato</a></li>
-          <li><a href="/sobre" class="app-bar-item">Sobre</a></li>
-        </ul>
-      </header>
-    </div>
+    <div id="navbar"></div>
     <div class="container pt-10 pb-10">
       <h1>Sobre mim</h1>
       <div class="text-center">
@@ -46,30 +28,7 @@
         <p class="text-just text-leader2">Sou fotógrafo, músico, e ciclista nas horas vagas. Eu descobri essa paixão por fotografia quando peguei emprestado da minha tia uma câmera fotográfica amadora e comecei a tirar fotos das plantas, a partir daí fui evoluindo e passei a fotografar pessoas e paisagens.</p>
       </div>
     </div>
-    <footer class="bg-dark">
-      <div class="container pt-10 pb-10">
-        <div class="text-center">
-          <ul class="inline-list reduce-1">
-            <li><a href="https://wa.me/5547991461055"><span class="fg-scheme-tertiary mif-whatsapp"></span></a></li>
-            <li><a href="https://github.com/rafinhavoigt"><span class="fg-scheme-tertiary mif-github"></span></a></li>
-            <li><a href="https://instagram.com/rafinhavoigt"><span class="fg-scheme-tertiary mif-instagram"></span></a></li>
-          </ul>
-        </div>
-        <div class="text-center mt-10">
-          <ul class="inline-list reduce-1">
-            <li><a class="fg-scheme-tertiary" href="/comercial">Portifólio</a></li>
-            <li><a class="fg-scheme-tertiary" href="/sobre">Sobre</a></li>
-            <li><a class="fg-scheme-tertiary" href="/contato">Contato</a></li>
-          </ul>
-        </div>
-        <div class="text-center mt-10 reduce-1">
-          &copy; <script>document.write(new Date().getFullYear());</script>
-          by Rafael Voigt Ferreira
-          <br>
-          Created with <a class="fg-scheme-tertiary" href="https://metroui.org.ua">Metro 4</a>
-        </div>
-      </div>
-    </footer>
-    <script src="/js/metro.min.js"></script>
+    <div id="footer"></div>
+    <script src="/js/custom.js"></script>
   </body>
 </html>
