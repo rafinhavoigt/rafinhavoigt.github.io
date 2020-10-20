@@ -1,23 +1,23 @@
 .screen-height {
   height: 100vh;
 }
-.screen-width {
-  width: 100vw;
-}
 .darken{
   filter: brightness(75%);
 }
 [class*="image"]{
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    position:relative; 
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position:relative; 
 }
 h1, .h1 {
-    margin-top: 0;
-    line-height: 1;
-    color: white;
-    font-family: 'Sansita Swashed', cursive;
+  margin-top: 0;
+  line-height: 1;
+  color: white;
+  font-family: 'Sansita Swashed', cursive;
+}
+#navbar {
+  display:none;
 }
 /* For small and portrait screens */
 @media screen and (max-width:768px) {
@@ -150,7 +150,7 @@ textarea.focused,
 .textarea.focused,
 .select.focused {
   -webkit-box-shadow: 0 0 0 3px rgba(88, 91, 93, 0.45);
-          box-shadow: 0 0 0 3px rgba(88, 91, 93, 0.45);
+  box-shadow: 0 0 0 3px rgba(88, 91, 93, 0.45);
 }
 .input,
 .select,
@@ -178,7 +178,7 @@ textarea.focused,
 .textarea textarea,
 .file textarea {
   -webkit-box-shadow: none!important;
-          box-shadow: none!important;
+  box-shadow: none!important;
   border-color: transparent;
 }
 .file .button {
@@ -281,7 +281,7 @@ textarea.focused,
 .shortcut:focus,
 .tool-button:focus {
   -webkit-box-shadow: 0 0 0 3px rgba(88, 91, 93, 0.45);
-          box-shadow: 0 0 0 3px rgba(88, 91, 93, 0.45);
+  box-shadow: 0 0 0 3px rgba(88, 91, 93, 0.45);
 }
 .button:hover,
 .command-button:hover,
@@ -356,7 +356,7 @@ textarea.focused,
   color: #F0A30A;
   border: 1px solid #F0A30A;
   -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 .d-menu .dropdown-toggle::before,
 .v-menu .dropdown-toggle::before {
@@ -391,7 +391,7 @@ textarea.focused,
   background-color: #F0A30A;
   color: black;
   -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 .t-menu li a {
   border-color: rgba(255, 255, 255, 0.25) !important;
@@ -422,7 +422,7 @@ textarea.focused,
 [class*=app-bar-expand] .app-bar-menu li .d-menu,
 [class*=app-bar-expand] .app-bar-container .d-menu {
   -webkit-box-shadow: none!important;
-          box-shadow: none!important;
+  box-shadow: none!important;
   border: 1px solid #F0A30A !important;
   background-color: black !important;
   color: #F0A30A !important;
@@ -444,7 +444,7 @@ textarea.focused,
 }
 .calendar .day.selected {
   -webkit-box-shadow: 0 0 0 1px #F0A30A !important;
-          box-shadow: 0 0 0 1px #F0A30A !important;
+  box-shadow: 0 0 0 1px #F0A30A !important;
 }
 .calendar .day.selected::after {
   border-top-color: #F0A30A;
@@ -730,7 +730,7 @@ textarea.focused,
 }
 .streamer .stream-event.selected {
   -webkit-box-shadow: 0 0 0 1px #F0A30A !important;
-          box-shadow: 0 0 0 1px #F0A30A !important;
+  box-shadow: 0 0 0 1px #F0A30A !important;
 }
 .streamer .stream-event.selected::before {
   border-color: black !important;
@@ -992,7 +992,7 @@ textarea.focused,
 }
 .ribbon-menu .ribbon-dropdown {
   -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 .ribbon-menu .ribbon-dropdown li:hover {
   border-color: rgba(88, 91, 93, 0.25);
@@ -1087,5 +1087,5 @@ input[type="reset"]:focus,
 input[type="button"]:hover,
 input[type="submit"]:hover,
 input[type="reset"]:hover {
-    background-color: #F0A30A;
+  background-color: #F0A30A;
 }
