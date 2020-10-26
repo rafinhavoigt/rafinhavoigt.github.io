@@ -1,11 +1,10 @@
 function loadElement(element){
-    if($(`#${element}`).length > 0){
-        $.get(`/includes/${element}.html`).then(
-            function(response){
-                $(`#${element}`).html(response);
-            }
-        )
+    if($(`#${element}`).length>0){
+        return $(`#${element}`).load(`/includes/${element}.html`);
     }
 }
 loadElement("navbar");
 loadElement("footer");
+$.load(function(){
+    $(".fadein").fadeIn();
+});
