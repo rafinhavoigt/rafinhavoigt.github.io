@@ -16,7 +16,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@700&display=swap" rel="stylesheet">
     <script src="/js/metro.min.js"></script>
   </head>
-  <body class="bg-scheme-secondary fg-scheme-secondary text-center mt-13 mt-0-md">
+  <body class="bg-scheme-secondary fg-scheme-secondary text-center mt-13 mt-0-md fadein">
     <div id="navbar"></div>
     <div class="container pb-15 pt-5">
       <h1>Contato</h1>
@@ -41,7 +41,7 @@
       </form>
       </div>
       <div id="footer"></div>
-    <script src="/js/custom.js"></script>
+    <script src="/js/custom.min.js"></script>
       <script>function formatTelephone(e){var o=e.value;return 0===o.length?(e.value="("+o,!0):3===o.length?(e.value=o+") ",!0):9===o.length?("9"!=e.value[5]&&(e.value=o+"-",e.maxLength=14),!0):10===o.length?("9"==e.value[5]&&(e.value=o+"-",e.maxLength=15),!0):void 0}function submitForm(){var e=document.getElementsByTagName("form")[0];console.log(e);$.ajax({url:"https://formspree.io/f/mzbkrezg",method:e.method,data:e,headers:{Accept:"application/json"}}).then(function(o){Metro.infobox.create("<h2>Sucesso!</h2><p>A sua mensagem foi enviada com sucesso, eu retornarei o mais breve possível.</p>","yellow"),console.log(o),e.reset()})}</script>
   </body>
 </html>
