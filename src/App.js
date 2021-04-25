@@ -1,8 +1,7 @@
 import React from 'react';
-import LowBar from './components/LowBar';
-
+import Home from './pages/Home';
 function App() {
-  return <LowBar />;
+  return <Home />;
 }
 
 export default App;
