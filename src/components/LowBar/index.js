@@ -20,6 +20,9 @@ const useStyles = makeStyles((theme) => ({
     top: 'auto',
     bottom: 0,
     backgroundColor: color0
+  },
+  title: {
+    paddingRight: '1rem'
   }
 }));
 
@@ -28,10 +31,20 @@ export default function LowBar() {
   return (
     <AppBar position="fixed" color="primary" className={classes.appBar}>
       <Toolbar>
-        <Typography>Rafinha Voigt</Typography>
-        <Box m l="auto">
+        <Typography className={classes.title}>Rafinha Voigt</Typography>
+        <Typography variant="small" component="small">
+          Fotografias
+        </Typography>
+        <Box
+          ml="auto"
+          justifyContent="center"
+          alignItems="center"
+          display="flex"
+        >
           <Typography>Sobre</Typography>
-          <InfoIcon />
+          <Box pl={1}>
+            <InfoIcon color="inherit" fontSize="small" />
+          </Box>
         </Box>
       </Toolbar>
     </AppBar>
