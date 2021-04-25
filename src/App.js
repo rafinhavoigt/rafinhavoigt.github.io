@@ -1,9 +1,8 @@
 import React from 'react';
+import LowBar from './components/LowBar';
 
 function App() {
-  return (
-      <h1>Olá mundo !!!</h1>
-  );
+  return <LowBar />;
 }
 
 export default App;
