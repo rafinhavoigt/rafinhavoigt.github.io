@@ -1,19 +1,9 @@
 import React from 'react';
-import {
-  AppBar,
-  Toolbar,
-  Fab,
-  IconButton,
-  Typography,
-  Box
-} from '@material-ui/core';
-import MenuIcon from '@material-ui/icons/Menu';
-import AddIcon from '@material-ui/icons/Add';
-import SearchIcon from '@material-ui/icons/Search';
+import {AppBar, Toolbar, Typography, Box} from '@material-ui/core';
+import AboutModal from '../AboutModal/index.js';
 import InfoIcon from '@material-ui/icons/Info';
-import MoreIcon from '@material-ui/icons/MoreVert';
 import {makeStyles} from '@material-ui/core/styles';
-import {color0} from '../../styles/colors';
+import {color0, color1} from '../../styles/colors';
 
 const useStyles = makeStyles((theme) => ({
   appBar: {
@@ -23,30 +13,52 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     paddingRight: '1rem'
+  },
+  about: {
+    '&:hover': {
+      cursor: 'pointer',
+      color: color0,
+      backgroundColor: color1
+    }
   }
 }));
 
 export default function LowBar() {
   const classes = useStyles();
+  const [open, setOpen] = React.useState(false);
+
+  const openModal = () => {
+    setOpen(true);
+  };
+
+  const closeModal = () => {
+    setOpen(false);
+  };
+
   return (
-    <AppBar position="fixed" color="primary" className={classes.appBar}>
-      <Toolbar>
-        <Typography className={classes.title}>Rafinha Voigt</Typography>
-        <Typography variant="small" component="small">
-          Fotografias
-        </Typography>
-        <Box
-          ml="auto"
-          justifyContent="center"
-          alignItems="center"
-          display="flex"
-        >
-          <Typography>Sobre</Typography>
-          <Box pl={1}>
-            <InfoIcon color="inherit" fontSize="small" />
+    <>
+      <AppBar position="fixed" color="primary" className={classes.appBar}>
+        <Toolbar>
+          <Typography className={classes.title}>Rafinha Voigt</Typography>
+          <Typography variant="small" component="small">
+            Fotografias
+          </Typography>
+          <Box
+            ml="auto"
+            justifyContent="center"
+            alignItems="center"
+            display="flex"
+            onClick={openModal}
+            className={classes.about}
+          >
+            <Typography>Sobre</Typography>
+            <Box pl={1}>
+              <InfoIcon color="inherit" fontSize="small" />
+            </Box>
           </Box>
-        </Box>
-      </Toolbar>
-    </AppBar>
+        </Toolbar>
+      </AppBar>
+      <AboutModal state={open} callback={closeModal} />
+    </>
   );
 }
