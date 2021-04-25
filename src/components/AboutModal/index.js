@@ -23,19 +23,17 @@ export default function AboutModal({state, callback}) {
   });
 
   return (
-    <>
-      <Modal
-        open={open}
-        onClose={handleClose}
-        closeAfterTransition
-        BackdropComponent={Backdrop}
-        BackdropProps={{
-          timeout: 500
-        }}
-      >
-        <h1>Eu sou uma modal</h1>
-      </Modal>
-    </>
+    <Modal
+      open={open}
+      onClose={handleClose}
+      closeAfterTransition
+      BackdropComponent={Backdrop}
+      BackdropProps={{
+        timeout: 500
+      }}
+    >
+      <h1>Eu sou uma modal</h1>
+    </Modal>
   );
 }
 AboutModal.propTypes = {
