@@ -1,6 +1,12 @@
 import React from 'react';
-import LowBar from '../../components/LowBar';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 
 export default function Home() {
-  return <LowBar />;
+  return (
+    <>
+      <Header />
+      <Footer />
+    </>
+  );
 }
