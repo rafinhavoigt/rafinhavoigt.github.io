@@ -39,7 +39,7 @@ export default function Header() {
       </Box>
       <Box>
         <Typography variant="body" component="p" color="textSecondary">
-          Paisagens | retratos | comercial
+          Paisagens | Retratos | Comercial
         </Typography>
       </Box>
       <Box
@@ -51,22 +51,22 @@ export default function Header() {
       >
         <Box mr={1} ml={1}>
           <Link
-            href={twitterAccount}
-            color="inherit"
-            target="_blank"
-            rel="noopener"
-          >
-            <TwitterIcon />
-          </Link>
-        </Box>
-        <Box mr={1} ml={1}>
-          <Link
             href={instagramAccount}
             color="inherit"
             target="_blank"
             rel="noopener"
           >
             <InstagramIcon />
+          </Link>
+        </Box>
+        <Box mr={1} ml={1}>
+          <Link
+            href={twitterAccount}
+            color="inherit"
+            target="_blank"
+            rel="noopener"
+          >
+            <TwitterIcon />
           </Link>
         </Box>
         <Box mr={1} ml={1}>
