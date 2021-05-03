@@ -13,7 +13,8 @@ const useStyles = makeStyles({
     textAlign: 'center'
   },
   title: {
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    fontFamily: 'Sansita Swashed, cursive'
   }
 });
 
@@ -32,16 +33,12 @@ export default function Header() {
       className={classes.root}
       marginTop={5}
     >
-      <Box>
-        <Typography variant="h4" component="h1" className={classes.title}>
-          Rafael Voigt Ferreira
-        </Typography>
-      </Box>
-      <Box>
-        <Typography variant="body" component="p" color="textSecondary">
-          Paisagens | Retratos | Comercial
-        </Typography>
-      </Box>
+      <Typography variant="h4" component="h1" className={classes.title}>
+        Rafael Voigt Ferreira
+      </Typography>
+      <Typography variant="body" component="p" color="textSecondary">
+        Paisagens | Retratos | Comercial
+      </Typography>
       <Box
         flexDirection="row"
         display="flex"
