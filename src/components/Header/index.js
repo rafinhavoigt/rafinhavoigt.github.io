@@ -36,7 +36,7 @@ export default function Header() {
       <Typography variant="h4" component="h1" className={classes.title}>
         Rafael Voigt Ferreira
       </Typography>
-      <Typography variant="body" component="p" color="textSecondary">
+      <Typography variant="subtitle1" component="p" color="textSecondary">
         Paisagens | Retratos | Comercial
       </Typography>
       <Box
