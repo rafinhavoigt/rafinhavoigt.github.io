@@ -22,10 +22,17 @@ export default function ImagesFeed() {
   const [columns, setColumns] = React.useState(0);
   const isMobileDevice = useMediaQuery(theme.breakpoints.down('xs'));
   const isTablet = useMediaQuery(theme.breakpoints.between('sm', '1200'));
+  const [open, setOpen] = React.useState(false);
+
+  const viewPicture = () => {
+    setOpen(true);
+  };
+
+  const closePicture = () => {
+    setOpen(false);
+  };
 
   React.useEffect(() => {
-    console.log('isMobile ' + isMobileDevice);
-    console.log('isTablet ' + isTablet);
     if (isMobileDevice === true) {
       setColumns(2);
     } else if (isTablet === true) {
@@ -39,8 +46,12 @@ export default function ImagesFeed() {
     <div className={classes.root}>
       <GridList cellHeight={160} cols={columns}>
         {tileData.map((tile) => (
-          <GridListTile key={tile.img} cols={tile.cols || 1}>
-            <img src={tile.img} alt={tile.title} />
+          <GridListTile
+            key={tile.thumbnail}
+            cols={tile.cols || 1}
+            onClick={() => alert(tile.thumnail)}
+          >
+            <img src={tile.thumbnail} alt={tile.title} />
           </GridListTile>
         ))}
       </GridList>
