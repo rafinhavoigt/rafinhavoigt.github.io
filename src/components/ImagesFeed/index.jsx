@@ -5,6 +5,7 @@ import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
 import {tileData} from './tileData';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
+import PhotoViewer from '../PhotoViewer/';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -22,14 +23,17 @@ export default function ImagesFeed() {
   const [columns, setColumns] = React.useState(0);
   const isMobileDevice = useMediaQuery(theme.breakpoints.down('xs'));
   const isTablet = useMediaQuery(theme.breakpoints.between('sm', '1200'));
-  const [open, setOpen] = React.useState(false);
+  const [open, openViewer] = React.useState(false);
+  const [picture, setPicture] = React.useState(null);
 
-  const viewPicture = () => {
-    setOpen(true);
+  const closeViewer = () => {
+    openViewer(false);
+    setPicture(null);
   };
 
-  const closePicture = () => {
-    setOpen(false);
+  const viewPicture = (picture) => {
+    setPicture(picture);
+    openViewer(true);
   };
 
   React.useEffect(() => {
@@ -49,12 +53,17 @@ export default function ImagesFeed() {
           <GridListTile
             key={tile.thumbnail}
             cols={tile.cols || 1}
-            onClick={() => alert(tile.thumnail)}
+            onClick={() => viewPicture(tile.thumbnail)}
           >
             <img src={tile.thumbnail} alt={tile.title} />
           </GridListTile>
         ))}
       </GridList>
+      <PhotoViewer
+        currentState={open}
+        picture={picture}
+        callback={closeViewer}
+      />
     </div>
   );
 }
