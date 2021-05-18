@@ -25,14 +25,16 @@ export default function ImagesFeed() {
   const isTablet = useMediaQuery(theme.breakpoints.between('sm', '1200'));
   const [open, openViewer] = React.useState(false);
   const [picture, setPicture] = React.useState(null);
+  const [title, setTitle] = React.useState(null);
 
   const closeViewer = () => {
     openViewer(false);
     setPicture(null);
   };
 
-  const viewPicture = (picture) => {
+  const viewPicture = (picture, title) => {
     setPicture(picture);
+    setTitle(title);
     openViewer(true);
   };
 
@@ -53,7 +55,7 @@ export default function ImagesFeed() {
           <GridListTile
             key={tile.thumbnail}
             cols={tile.cols || 1}
-            onClick={() => viewPicture(tile.thumbnail)}
+            onClick={() => viewPicture(tile.image, tile.title)}
           >
             <img src={tile.thumbnail} alt={tile.title} />
           </GridListTile>
@@ -63,6 +65,7 @@ export default function ImagesFeed() {
         currentState={open}
         picture={picture}
         callback={closeViewer}
+        title={title}
       />
     </div>
   );
