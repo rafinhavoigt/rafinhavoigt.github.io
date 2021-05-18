@@ -17,7 +17,7 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    backgroundColor: 'black'
+    backgroundColor: 'transparent'
   },
   dialogTitle: {
     position: 'relative',
@@ -41,7 +41,6 @@ export default function PhotoViewer({currentState, picture, callback, title}) {
   const classes = useStyles();
   return (
     <Dialog
-      fullscreen
       open={currentState}
       onClose={callback}
       TransitionComponent={Transition}
