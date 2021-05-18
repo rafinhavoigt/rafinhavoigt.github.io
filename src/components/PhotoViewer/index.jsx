@@ -16,9 +16,6 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 });
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    backgroundColor: 'transparent'
-  },
   dialogTitle: {
     position: 'relative',
     backgroundColor: 'transparent',
@@ -27,13 +24,13 @@ const useStyles = makeStyles((theme) => ({
   dialogContent: {
     backgroundColor: 'transparent',
     padding: 0,
-    width: '100%'
+    width: 'fit-content'
   },
   closeButton: {
     marginLeft: 'auto'
   },
   img: {
-    height: 512
+    maxHeight: 512
   }
 }));
 
@@ -44,7 +41,7 @@ export default function PhotoViewer({currentState, picture, callback, title}) {
       open={currentState}
       onClose={callback}
       TransitionComponent={Transition}
-      className={classes.root}
+      maxWidth="xl"
     >
       <AppBar className={classes.dialogTitle}>
         <Toolbar>
