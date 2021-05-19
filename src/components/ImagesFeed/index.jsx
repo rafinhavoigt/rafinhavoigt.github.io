@@ -26,6 +26,8 @@ export default function ImagesFeed() {
   const [open, openViewer] = React.useState(false);
   const [picture, setPicture] = React.useState(null);
   const [title, setTitle] = React.useState(null);
+  const [height, setHeight] = React.useState(null);
+  const [gridHeight, setGridHeight] = React.useState(160);
 
   const closeViewer = () => {
     openViewer(false);
@@ -46,16 +48,21 @@ export default function ImagesFeed() {
     } else {
       setColumns(5);
     }
-  }, [isMobileDevice, isTablet]);
+    setGridHeight(height);
+  }, [isMobileDevice, isTablet, height]);
 
   return (
     <div className={classes.root}>
-      <GridList cellHeight={160} cols={columns}>
+      <GridList cellHeight={gridHeight} cols={columns}>
         {tileData.map((tile) => (
           <GridListTile
             key={tile.thumbnail}
             cols={tile.cols || 1}
             onClick={() => viewPicture(tile.image, tile.title)}
+            ref={(el) => {
+              if (!el) return;
+              setHeight(el.getBoundingClientRect().width - 20);
+            }}
           >
             <img src={tile.thumbnail} alt={tile.title} />
           </GridListTile>
