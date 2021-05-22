@@ -14,6 +14,11 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'space-around',
     overflow: 'hidden',
     backgroundColor: theme.palette.background.paper
+  },
+  grid: {
+    width: 100,
+    height: 0,
+    paddingBottom: 100
   }
 }));
 
@@ -26,8 +31,6 @@ export default function ImagesFeed() {
   const [open, openViewer] = React.useState(false);
   const [picture, setPicture] = React.useState(null);
   const [title, setTitle] = React.useState(null);
-  const [height, setHeight] = React.useState(null);
-  const [gridHeight, setGridHeight] = React.useState(160);
 
   const closeViewer = () => {
     openViewer(false);
@@ -48,21 +51,17 @@ export default function ImagesFeed() {
     } else {
       setColumns(5);
     }
-    setGridHeight(height);
-  }, [isMobileDevice, isTablet, height]);
+  }, [isMobileDevice, isTablet]);
 
   return (
     <div className={classes.root}>
-      <GridList cellHeight={gridHeight} cols={columns}>
+      <GridList cols={columns}>
         {tileData.map((tile) => (
           <GridListTile
             key={tile.thumbnail}
             cols={tile.cols || 1}
             onClick={() => viewPicture(tile.image, tile.title)}
-            ref={(el) => {
-              if (!el) return;
-              setHeight(el.getBoundingClientRect().width - 20);
-            }}
+            className={classes.grid}
           >
             <img src={tile.thumbnail} alt={tile.title} />
           </GridListTile>
