@@ -47,9 +47,9 @@ export default function ImagesFeed() {
     if (isMobileDevice === true) {
       setColumns(2);
     } else if (isTablet === true) {
-      setColumns(3);
+      setColumns(4);
     } else {
-      setColumns(5);
+      setColumns(4);
     }
   }, [isMobileDevice, isTablet]);
 
