@@ -37,7 +37,7 @@ export default function Header() {
         Rafael Voigt Ferreira
       </Typography>
       <Typography variant="subtitle1" component="p" color="textSecondary">
-        Paisagens | Retratos | Comercial
+        Comercial | Retratos | Paisagens
       </Typography>
       <Box
         flexDirection="row"
