@@ -43,141 +43,121 @@ const tileData = [
   {
     thumbnail: thumbnail1,
     image: image1,
-    title: 'thumbnail',
-    author: 'author',
+    title: 'Barbearia Barbada',
     cols: 1
   },
   {
     thumbnail: thumbnail2,
     image: image2,
-    title: 'thumbnail',
-    author: 'author',
+    title: 'Barbearia Barbada',
     cols: 1
   },
   {
     thumbnail: thumbnail3,
     image: image3,
-    title: 'thumbnail',
-    author: 'author',
+    title: 'Lucas',
     cols: 1
   },
   {
     thumbnail: thumbnail4,
     image: image4,
-    title: 'thumbnail',
-    author: 'author',
+    title: 'João',
     cols: 1
   },
   {
     thumbnail: thumbnail5,
     image: image5,
-    title: 'thumbnail',
-    author: 'author',
+    title: 'Penha, 2019',
     cols: 1
   },
   {
     thumbnail: thumbnail6,
     image: image6,
-    title: 'thumbnail',
-    author: 'author',
+    title: 'Penha, 2019',
     cols: 1
   },
   {
     thumbnail: thumbnail7,
     image: image7,
-    title: 'thumbnail',
-    author: 'author',
+    title: 'Barbearia Barbada',
     cols: 1
   },
   {
     thumbnail: thumbnail8,
     image: image8,
-    title: 'thumbnail',
-    author: 'author',
+    title: 'Barbearia Barbada',
     cols: 1
   },
   {
     thumbnail: thumbnail9,
     image: image9,
-    title: 'thumbnail',
-    author: 'author',
+    title: 'Lucas',
     cols: 1
   },
   {
     thumbnail: thumbnail10,
     image: image10,
-    title: 'thumbnail',
-    author: 'author',
+    title: 'João',
     cols: 1
   },
   {
     thumbnail: thumbnail11,
     image: image11,
-    title: 'thumbnail',
-    author: 'author',
+    title: 'Praia do Cascalho',
     cols: 1
   },
   {
     thumbnail: thumbnail12,
     image: image12,
-    title: 'thumbnail',
-    author: 'author',
+    title: 'Praia do Cascalho',
     cols: 1
   },
   {
     thumbnail: thumbnail13,
     image: image13,
-    title: 'thumbnail',
-    author: 'author',
+    title: 'Barbearia Barbada',
     cols: 1
   },
   {
     thumbnail: thumbnail14,
     image: image14,
-    title: 'thumbnail',
-    author: 'author',
+    title: 'Barbearia Barbada',
     cols: 1
   },
   {
     thumbnail: thumbnail15,
     image: image15,
-    title: 'thumbnail',
-    author: 'author',
+    title: 'Jardim Botânico',
     cols: 1
   },
   {
     thumbnail: thumbnail16,
     image: image16,
-    title: 'thumbnail',
-    author: 'author',
+    title: 'Jardim Botânico',
     cols: 1
   },
   {
     thumbnail: thumbnail17,
     image: image17,
-    title: 'thumbnail',
-    author: 'author',
+    title: 'Morro Azul',
     cols: 1
   },
   {
     thumbnail: thumbnail18,
     image: image18,
-    title: 'thumbnail',
-    author: 'author',
+    title: 'Morro do Santo Anjo',
     cols: 1
   },
   {
     thumbnail: thumbnail19,
     image: image19,
-    title: 'thumbnail',
-    author: 'author',
+    title: 'Penha, 2020',
     cols: 1
   },
   {
     thumbnail: thumbnail20,
     image: image20,
-    title: 'thumbnail',
-    author: 'author',
+    title: 'Barbearia Barbada',
     cols: 1
   }
 ];
