@@ -101,6 +101,18 @@ const tileData = [
     cols: 1
   },
   {
+    thumbnail: thumbnail19,
+    image: image19,
+    title: 'Penha, 2019',
+    cols: 1
+  },
+  {
+    thumbnail: thumbnail20,
+    image: image20,
+    title: 'Penha, 2019',
+    cols: 1
+  },
+  {
     thumbnail: thumbnail11,
     image: image11,
     title: 'Praia do Cascalho',
@@ -109,7 +121,7 @@ const tileData = [
   {
     thumbnail: thumbnail12,
     image: image12,
-    title: 'Praia do Cascalho',
+    title: 'Parque da Malwee',
     cols: 1
   },
   {
@@ -146,18 +158,6 @@ const tileData = [
     thumbnail: thumbnail18,
     image: image18,
     title: 'Morro do Santo Anjo',
-    cols: 1
-  },
-  {
-    thumbnail: thumbnail19,
-    image: image19,
-    title: 'Penha, 2020',
-    cols: 1
-  },
-  {
-    thumbnail: thumbnail20,
-    image: image20,
-    title: 'Barbearia Barbada',
     cols: 1
   }
 ];
