@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: 'auto'
   },
   img: {
-    maxHeight: '80vh',
+    maxHeight: '78vh',
     maxWidth: '80vw'
   }
 }));
