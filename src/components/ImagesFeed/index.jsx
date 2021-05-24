@@ -8,12 +8,37 @@ import PhotoViewer from '../PhotoViewer/';
 
 export default function ImagesFeed() {
   const theme = useTheme();
-  const [columns, setColumns] = React.useState(0);
-  const isMobileDevice = useMediaQuery(theme.breakpoints.down('xs'));
-  const isTablet = useMediaQuery(theme.breakpoints.between('sm', '1200'));
+  const isMobileDevice = useMediaQuery(theme.breakpoints.only('xs', 'sm'));
+  const isSmallTablet = useMediaQuery(theme.breakpoints.only('sm', 'md'));
+  const isBigTablet = useMediaQuery(theme.breakpoints.only('md', 'lg'));
+  const isDesktop = useMediaQuery(theme.breakpoints.only('lg', 'xl'));
+  const isWideScreen = useMediaQuery(theme.breakpoints.up('xl'));
   const [open, openViewer] = React.useState(false);
   const [picture, setPicture] = React.useState(null);
   const [title, setTitle] = React.useState(null);
+
+  const findOutTheHeight = () => {
+    if (isWideScreen) {
+      return 400;
+    } else if (isDesktop) {
+      return 350;
+    } else if (isBigTablet) {
+      return 200;
+    } else if (isSmallTablet) {
+      return 180;
+    } else if (isMobileDevice) {
+      return 160;
+    }
+  };
+  const height = findOutTheHeight();
+  const findOutTheNumberOfColumns = () => {
+    if (isMobileDevice) {
+      return 2;
+    } else {
+      return 4;
+    }
+  };
+  const columns = findOutTheNumberOfColumns();
 
   const closeViewer = () => {
     openViewer(false);
@@ -26,19 +51,9 @@ export default function ImagesFeed() {
     openViewer(true);
   };
 
-  React.useEffect(() => {
-    if (isMobileDevice === true) {
-      setColumns(2);
-    } else if (isTablet === true) {
-      setColumns(4);
-    } else {
-      setColumns(4);
-    }
-  }, [isMobileDevice, isTablet]);
-
   return (
     <div>
-      <GridList cols={columns}>
+      <GridList cols={columns} cellHeight={height}>
         {tileData.map((tile) => (
           <GridListTile
             key={tile.thumbnail}
