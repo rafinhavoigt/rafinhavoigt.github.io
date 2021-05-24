@@ -21,13 +21,13 @@ export default function ImagesFeed() {
     if (isWideScreen) {
       return 400;
     } else if (isDesktop) {
-      return 350;
+      return 320;
     } else if (isBigTablet) {
-      return 200;
+      return 230;
     } else if (isSmallTablet) {
-      return 180;
+      return 170;
     } else if (isMobileDevice) {
-      return 160;
+      return 180;
     }
   };
   const height = findOutTheHeight();
