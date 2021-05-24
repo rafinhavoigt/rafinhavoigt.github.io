@@ -14,11 +14,6 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'space-around',
     overflow: 'hidden',
     backgroundColor: theme.palette.background.paper
-  },
-  grid: {
-    width: 100,
-    height: 0,
-    paddingBottom: 100
   }
 }));
 
@@ -61,7 +56,6 @@ export default function ImagesFeed() {
             key={tile.thumbnail}
             cols={tile.cols || 1}
             onClick={() => viewPicture(tile.image, tile.title)}
-            className={classes.grid}
           >
             <img src={tile.thumbnail} alt={tile.title} />
           </GridListTile>
