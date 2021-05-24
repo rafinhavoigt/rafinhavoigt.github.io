@@ -1,5 +1,4 @@
 import React from 'react';
-import {makeStyles} from '@material-ui/core/styles';
 import {useTheme} from '@material-ui/core/styles';
 import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
@@ -7,19 +6,8 @@ import {tileData} from './tileData';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import PhotoViewer from '../PhotoViewer/';
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    justifyContent: 'space-around',
-    overflow: 'hidden',
-    backgroundColor: theme.palette.background.paper
-  }
-}));
-
 export default function ImagesFeed() {
   const theme = useTheme();
-  const classes = useStyles();
   const [columns, setColumns] = React.useState(0);
   const isMobileDevice = useMediaQuery(theme.breakpoints.down('xs'));
   const isTablet = useMediaQuery(theme.breakpoints.between('sm', '1200'));
@@ -49,7 +37,7 @@ export default function ImagesFeed() {
   }, [isMobileDevice, isTablet]);
 
   return (
-    <div className={classes.root}>
+    <div>
       <GridList cols={columns}>
         {tileData.map((tile) => (
           <GridListTile
