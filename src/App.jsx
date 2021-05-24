@@ -1,7 +1,16 @@
 import React from 'react';
-import Home from './pages/Home';
+import Header from './components/Header';
+import ImagesFeed from './components/ImagesFeed';
+import Footer from './components/Footer';
+
 function App() {
-  return <Home />;
+  return (
+    <>
+      <Header />
+      <ImagesFeed />
+      <Footer />
+    </>
+  );
 }
 
 export default App;
