@@ -18,8 +18,8 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 const useStyles = makeStyles((theme) => ({
   dialogTitle: {
     position: 'relative',
-    backgroundColor: 'transparent',
-    color: 'black'
+    backgroundColor: theme.palette.background.default,
+    color: theme.palette.text.primary
   },
   dialogContent: {
     backgroundColor: 'transparent',
